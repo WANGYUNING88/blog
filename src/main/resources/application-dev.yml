@@ -12,7 +12,7 @@ spring:
 logging:
   level:
     root: info
-    com.lrm: debug
+    com.wang: debug
   file: log/blog-dev.log
 
 

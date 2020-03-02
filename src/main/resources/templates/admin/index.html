@@ -20,7 +20,7 @@
         <div class="right m-item m-mobile-hide menu">
           <div class="ui dropdown  item">
             <div class="text">
-              <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005">
+              <img class="ui avatar image" th:src="@{${session.user.avatar}}">
               王余柠
             </div>
             <i class="dropdown icon"></i>
@@ -42,10 +42,10 @@
     <div class="ui container">
       <div class="ui success large  message">
         <h3>Hi,</h3>
-        <p>王余柠，欢迎登录！</p>
+        <p th:inline="text">欢迎 &nbsp;[[${session.user.nickname}]]&nbsp; 登录！</p>
       </div>
 
-      <img src="https://unsplash.it/1000/400?image=1005" alt="" class="ui rounded bordered fluid image">
+      <img th:src="@{${session.user.avatar}}" alt="" class="ui rounded bordered fluid image">
     </div>
   </div>
 
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="ui inverted section divider"></div>
-      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2021  Designed by Wangyuning</p>
+      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 - 2020  Designed by Wangyuning</p>
     </div>
 
   </footer>
